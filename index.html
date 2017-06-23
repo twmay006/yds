@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+    <meta charset="utf-8" />
+    <style>
+        #ie{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            text-align: center;
+            color: #1F2D3D;
+        }
+    </style>
+</head>
+
+<body>
+    <object id="MWRFATL" style="width: 0px;height: 0px; float: left;" codebase="plugs/eyemem.cab#version=1,0,0,1"
+        clsid="{96A57B79-8081-4BA3-9665-127469A15CA9}" type="application/x-itst-activex"></object>
+    <div id="ie" style="display: none;"> 您的浏览器太旧,请使用chrome等高级浏览器或者升级 </div>
+    <div id="app"></div>
+    <!-- <script src="/readcard.js"></script> -->
+    <script type="text/javascript">
+        if(!Object.defineProperty){
+            document.getElementById('ie').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

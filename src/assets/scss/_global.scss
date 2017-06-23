@@ -1,0 +1,161 @@
+    html {
+    height: 100%;
+    margin: 0;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+    color: #1F2D3D;
+}
+
+.total{
+    &:not(.lastChild) .el-table__body-wrapper{
+        td:last-child{
+            background: #feeeee !important;
+        }
+    }
+    .el-table__footer-wrapper{
+        td{
+            background: #feeeee;
+        }
+    }
+}
+
+.echarts{
+    /* 不能这样.  图表还没初始成功, empty是成立的, 这样的话height: 0; 再想想 ..  */
+    &:empty{
+        /* border: 0 none;
+        overflow: hidden;
+        height: 0 !important; */
+    }
+}
+
+#nprogress{
+    .bar{
+        background: #13CE66 !important;
+    }
+    .spinner-icon{
+        border-top-color: #13CE66 !important;
+        border-left-color: #13CE66 !important;
+    }
+}
+
+.el-loading-mask {
+    z-index: 1;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+/* 重置按钮下的a标签, 使a标签全部填充满按钮 */
+
+$btnList: ( el-button--small: 7px 9px, el-button--mini: 4px, el-button--large: 11px 19px, );
+.href {
+    padding: 0 !important;
+    a {
+        padding: 10px 15px;
+    }
+    @each $i,
+    $padding in $btnList {
+        &.#{$i} {
+            a {
+                display: inline-block;
+                padding: $padding;
+            }
+        }
+    }
+}
+
+.el-table__header-wrapper{
+    overflow-x: auto
+}
+
+.el-table__body-wrapper, .el-table__footer-wrapper{
+    td{
+        .cell:empty:after{
+            content: '-';
+        }
+    }
+}
+
+.filters {
+    margin: 0 0 20px 0;
+    border: 1px #efefef solid;
+    padding: 10px;
+    background: #f9f9f9;
+    .filter {
+        display: inline-block;
+        width: auto;
+        padding: 0 10px;
+        border-radius: 5px;
+        .el-select {
+            display: inline-block;
+        }
+    }
+    .tip{
+        span{
+            color: red;
+            vertical-align: middle;
+            padding: 0 5px;
+        }
+        padding: 10px 0;
+    }
+    .el-input {
+        padding: 10px 0;
+        width: 150px;
+        display: inline-block;
+    }
+    form{
+        >.el-button:last-child{
+            margin-left: 20px;
+            margin-right: 0;
+        }
+        .el-customer{
+            display: inline-block;
+        }
+    }
+    .el-button {
+        &:first-of-type{
+            margin-right: 20px;
+        }
+    }
+}
+
+.pagination-wrapper {
+    text-align: center;
+    padding: 20px 30px 0 30px;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
